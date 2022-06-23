@@ -16,5 +16,9 @@ class MainActivity : AppCompatActivity() {
             TouristPlace("Kaunos King Tombs",R.drawable.kapak_111629),
             TouristPlace("Afrodisias Ancient City",R.drawable.arena))
 
+        //Adapter
+
+
+        val adapter = recyclerAdapter (touristPlace)
     }
 }
