@@ -6,11 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.recycler_row.view.*
 
-class recyclerAdapter(val touristPlaceList: ArrayList<TouristPlace> ) : RecyclerView.Adapter<recyclerAdapter.TouristPlaceVH>() {
+class RecyclerAdapter(val touristPlaceList: ArrayList<TouristPlace> ) : RecyclerView.Adapter<RecyclerAdapter.TouristPlaceVH>() {
 
-    class TouristPlaceVH(itemView : View) : RecyclerView.ViewHolder(itemView){
-
-    }
+    class TouristPlaceVH(itemView : View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TouristPlaceVH {
         //Inflater
@@ -18,14 +16,15 @@ class recyclerAdapter(val touristPlaceList: ArrayList<TouristPlace> ) : Recycler
         return TouristPlaceVH(itemView)
     }
 
-    override fun onBindViewHolder(holder: TouristPlaceVH, position: Int) {
-
-        holder.itemView.recyclerviewtextview.text = touristPlaceList.get(position).toString()
-
-    }
-
     override fun getItemCount(): Int {
         return touristPlaceList.size
+    }
+    override fun onBindViewHolder(holder: TouristPlaceVH, position: Int) {
+
+        holder.itemView.recyclerViewTextView.text = touristPlaceList.get(position).name
+
+
+
     }
 
 }
