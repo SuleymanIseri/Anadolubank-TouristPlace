@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.recycler_row.view.*
 
 class RecyclerAdapter(val touristPlaceList: ArrayList<TouristPlace> ) : RecyclerView.Adapter<RecyclerAdapter.TouristPlaceVH>() {
@@ -19,9 +20,18 @@ class RecyclerAdapter(val touristPlaceList: ArrayList<TouristPlace> ) : Recycler
     override fun getItemCount(): Int {
         return touristPlaceList.size
     }
+
     override fun onBindViewHolder(holder: TouristPlaceVH, position: Int) {
 
         holder.itemView.recyclerViewTextView.text = touristPlaceList.get(position).name
+
+        holder.itemView.imageView.setImageResource(touristPlaceList.get(position).image)
+
+        // holder.itemView.apply { Glide.with(holder.itemView).load("https://www.kutahya.bel.tr/img/tarih/14.jpg").into(holder.itemView.imageView) }
+
+
+
+
 
 
 
