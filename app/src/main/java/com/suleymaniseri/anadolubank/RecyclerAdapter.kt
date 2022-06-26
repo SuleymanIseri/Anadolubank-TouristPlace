@@ -25,9 +25,9 @@ class RecyclerAdapter(val touristPlaceList: ArrayList<TouristPlace> ) : Recycler
 
         holder.itemView.recyclerViewTextView.text = touristPlaceList.get(position).name
 
-        holder.itemView.imageView.setImageResource(touristPlaceList.get(position).image)
+        //holder.itemView.imageView.setImageResource(touristPlaceList.get(position).image)
 
-        // holder.itemView.apply { Glide.with(holder.itemView).load("https://www.kutahya.bel.tr/img/tarih/14.jpg").into(holder.itemView.imageView) }
+         holder.itemView.apply { Glide.with(holder.itemView).load("https://www.kutahya.bel.tr/img/tarih/14.jpg").into(holder.itemView.imageView) }
 
 
 
